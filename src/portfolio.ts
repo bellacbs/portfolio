@@ -47,15 +47,15 @@ const socialMedia = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "EAGER FULL STACK DEVELOPER EXPLORING DIVERSE TECH STACKS.",
   skills: [
-    // emoji(
-    //   "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    // ),
-    // emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    // emoji(
-    //   "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    // )
+    emoji(
+      "⚡ Full Stack Developer crafting engaging user interfaces for web and mobile apps. Utilizing Docker for consistent development environments and implementing CI/CD for streamlined testing and deployment."
+    ),
+    emoji("⚡ Developing robust iOS, Android, web, and API solutions, including Progressive Web Applications (PWAs) in both traditional and Single Page Application (SPA) stacks."),
+    emoji(
+      "⚡ Seamlessly integrating third-party services, including Firebase, AWS, and Google Cloud, to enhance the functionality and performance of applications."
+    )
   ],
 
   softwareSkills: [
