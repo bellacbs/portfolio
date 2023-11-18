@@ -214,46 +214,78 @@ const workExperiences = {
     {
       role: "Full Stack Developer",
       company: "ICBS Desenvolvimento de Softwares",
-      companylogo: "./assets/images/IcbsLogo.jpeg",
+      companylogo: "/src/assets/images/IcbsLogo.jpeg",
       date: "Jun 2022 - Present",
-      desc: "I am currently working as a full-stack developer on a mobile application focused on the delivery market and taking on some architect responsibilities by directly engaging with the client to gather system requirements.",
+      desc: "I manage my own company, offering freelance web and mobile development services. I specialize in React, React Native, JavaScript, NodeJS, Nest, Typescript, Docker, Firebase, and Golang. I collaborate with clients to deliver efficient and innovative solutions.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Development of a mobile application for the delivery sector, using React Native, NestJS, Typescript, Firebase, Docker, CI/CD.",
+        "Structuring all layers of the application, such as Backend, Frontend (web and mobile), Database, and Cloud Infrastructure.",
+        "Direct contact with the client to ensure continuous alignment and satisfaction.",
+        "System requirements gathering to ensure customized solutions.",
+        "Development of applications from scratch.",
+        "Continuous maintenance and enhancement of legacy technological applications."
       ]
     },
     {
       role: "Counselor",
       company: "YMCA of Greater Rochester",
-      companylogo: "./assets/images/ymcaLogo.jpeg",
+      companylogo: "/src/assets/images/ymcaLogo.jpeg",
       date: "May 2023 - Sep 2023",
-      desc: "Cultural exchange that allowed me to improve leadership, creativity, English and teamwork.",
+      // desc: "",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Developed creative and collaborative activities for native English speakers.",
+        "Actively learned English while leading educational programs.",
+        "Diligent supervision to ensure a safe environment.",
+        "Effective collaboration in multicultural teams, enhancing teamwork skills."
       ]
     },
     {
       role: "Backend developer",
       company: "Ubistart",
-      companylogo: "./assets/images/ubistartLogo.jpeg",
+      companylogo: "/src/assets/images/ubistartLogo.jpeg",
       date: "Jun 2022 - Mar 2023",
-      desc: "In one of the projects, I worked as a back-end developer on the architecture and implementation of real-time communication applications for video calls and radio using the WebRTC protocol. The project involved stages of call transmission, handling, and recording.In another project, I also worked on the back-end, conceptualizing and developing a machine communication application using a custom protocol.Lastly, I worked as a full-stack developer on a legacy project in the construction industry, where I addressed existing bugs and worked on usability and performance improvements.In most of these projects, there was a need for low-level technologies (sockets, file manipulation, multimedia codecs, ffmpeg, etc.) and high-performance languages (Go) capable of handling various protocols and large volumes of data."
+      // desc: "",
+      descBullets: [
+        "Designed and implemented real-time communication applications for video calls and radio using the WebRTC protocol.",
+        "Managed transmission, call processing, and recording phases.",
+        "Developed a machine communication application with a custom protocol.",
+        "Building new robust applications for a mining company.",
+        "Served as a full-stack developer for a legacy construction project.",
+        "Resolved existing bugs and enhanced usability and performance.",
+        "Reduced report generation time from 1 hour 30 minutes to 20 minutes."
+      ]
     },
     {
       role: "Pedagogical Monitor",
       company: "Labenu",
-      companylogo: "./assets/images/labenuLogo.jpeg",
+      companylogo: "/src/assets/images/labenuLogo.jpeg",
       date: "Nov 2021 - Jun 2022",
-      desc: "At Labenu, I had the opportunity to work in the training of technology professionals, attending classes, providing support, evaluating code, and giving feedback for improvements.The greatest challenge was imparting knowledge to people who often came from entirely different careers outside the IT industry. However, it was a great personal satisfaction to see the impact on their lives and the progress they made thanks to the knowledge they acquired.During this experience, I was able to experience different perspectives on certain technologies, expanding my technical skills and my ability to convey knowledge."
+      // desc: "",
+      descBullets: [
+        "Training technology professionals, including class monitoring, student support, code evaluation, and providing feedback for improvement.",
+        "Teaching individuals who came from completely different career backgrounds to the IT industry.",
+        "Personal satisfaction in witnessing the positive impact on students' lives and their progress due to the knowledge acquired.",
+        "Expansion of my technical skills and enhancement of my ability to convey knowledge, thanks to exposure to different perspectives on technologies."
+      ]
     },
     {
       role: "Bank Enployee",
       company: "Bank of Brazil",
-      companylogo: "./assets/images/bancodobrasilLogo.jpeg",
+      companylogo: "/src/assets/images/bancodobrasilLogo.jpeg",
       date: "Jul 2012 - Mar 2021 ",
-      desc: "While working in the banking sector, I was involved in promoting and selling various products and services offered by the institution, aligning corporate goals with the needs and desires of customers.Among the biggest challenges was coordinating the efforts of various stakeholders in the credit approval process, which involved overseeing the preparation of technical projects, credit limits with external partners, approval of analyses by operations centers, and negotiations with credit applicants.'\n'I also obtained certification and worked in the investment field, offering products to savings-oriented clients based on their needs.The collaborative environment, where various individuals have different specialties, fosters teamwork and makes it natural for peers, superiors, and subordinates to evaluate each other. This helps develop professionals who are not only capable of providing constructive feedback but also of receiving it, all in pursuit of continuous improvement as professionals."
-    }
+      // desc: "",
+      descBullets: [
+        "Promotion and marketing of various banking products and services.",
+        "Alignment of corporate goals with the needs and desires of clients.",
+        "Coordination among different parties in credit contracting.",
+        "Monitoring the development of technical projects and credit limits with external partners.",
+        "Approval of analyses within operational centers.",
+        "Certification and involvement in the field of investments.",
+        "Teamwork with mutual assessment.",
+        "Professional development capable of providing and receiving constructive feedback."
+      ]
+    },
+    
   ]
 };
 
