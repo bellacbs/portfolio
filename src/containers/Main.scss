@@ -2,7 +2,7 @@
 
 .dark-mode {
   background-color: $darkBackground;
-  color: $textColorDark;
+  color: $textColorDark !important;
   transition: "0.1s";
 }
 

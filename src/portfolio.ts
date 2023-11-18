@@ -118,41 +118,39 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Descomplica Digital College",
-      logo: "./assets/images/descomplicaLogo.jpeg",
+      logo: "/src/assets/images/descomplicaLogo.jpeg",
       subHeader: "MBA in Information Security",
       duration: "2023 - 2024"
     },
     {
       schoolName: "Labenu",
-      logo: "./assets/images/labenuLogo.jpeg",
+      logo: "/src/assets/images/labenuLogo.jpeg",
       subHeader: "BootCamp Web Full Stack",
       duration: "2021 - 2021"
     },
     {
       schoolName: "ESAB - Escola Superior Aberta do Brasil",
-      logo: "./assets/images/esabLogo.jpeg",
+      logo: "/src/assets/images/esabLogo.jpeg",
       subHeader: "Bachelor of Information Systems",
       duration: "2017 - 2020"
     },
     {
       schoolName: "ESAB - Escola Superior Aberta do Brasil",
-      logo: "./assets/images/esabLogo.jpeg",
+      logo: "/src/assets/images/esabLogo.jpeg",
       subHeader: "Graduate Degree in Systems Engineering",
       duration: "2019 - 2020"
     },
     {
       schoolName: "Puc Minas",
-      logo: "./assets/images/pucMinasLogo.jpeg",
+      logo: "/src/assets/images/pucMinasLogo.jpeg",
       subHeader: "Graduate Degree in IT Governance",
       duration: "2018 - 2020"
     },
     {
       schoolName: "Pitágoras Integrated Colleges of Montes Claros",
-      logo: "./assets/images/unifipmocLogo.jpeg",
+      logo: "/src/assets/images/unifipmocLogo.jpeg",
       subHeader: "Bachelor of Civil Egineering",
       duration: "2010 - 2017"
-      // desc: "",
-      // descBullets: [""]
     }
   ]
 };
