@@ -10,6 +10,7 @@ import Skills from "./skills/Skills";
 import Education from "./education/Education";
 import SkillsProgress from "./skillProgress/SkillProgress";
 import Footer from "./footer/Footer";
+import ScrollToTop from "../components/topButton/TopButton";
 const Main = () => {
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
     const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
@@ -44,6 +45,7 @@ const Main = () => {
             <SkillsProgress/>
             <Education/>
             <Footer/>
+            <ScrollToTop/>
           </>
           }
         </StyleProvider>
