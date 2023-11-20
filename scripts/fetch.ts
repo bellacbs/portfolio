@@ -12,8 +12,6 @@ const ERR = {
     "Github Username was found to be undefined. Please set all relevant environment variables.",
   requestFailed:
     "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
-  requestFailedMedium:
-    "The request to Medium didn't succeed. Check if Medium username in your .env file is correct."
 };
 if (USE_GITHUB_DATA === "true") {
   if (GITHUB_USERNAME === undefined) {
@@ -23,37 +21,37 @@ if (USE_GITHUB_DATA === "true") {
   console.log(`Fetching profile data for ${GITHUB_USERNAME}`);
   const data = JSON.stringify({
     query: `
-{
-  user(login:"${GITHUB_USERNAME}") { 
-    name
-    bio
-    avatarUrl
-    location
-    pinnedItems(first: 6, types: [REPOSITORY]) {
-      totalCount
-      edges {
-          node {
-            ... on Repository {
-              name
-              description
-              forkCount
-              stargazers {
-                totalCount
-              }
-              url
-              id
-              diskUsage
-              primaryLanguage {
-                name
-                color
+    {
+      user(login:"${GITHUB_USERNAME}") { 
+        name
+        bio
+        avatarUrl
+        location
+        pinnedItems(first: 6, types: [REPOSITORY]) {
+          totalCount
+          edges {
+              node {
+                ... on Repository {
+                  name
+                  description
+                  forkCount
+                  stargazers {
+                    totalCount
+                  }
+                  url
+                  id
+                  diskUsage
+                  primaryLanguage {
+                    name
+                    color
+                  }
+                }
               }
             }
           }
         }
-      }
     }
-}
-`
+    `
   });
   const default_options = {
     hostname: "api.github.com",
@@ -74,8 +72,8 @@ if (USE_GITHUB_DATA === "true") {
       throw new Error(ERR.requestFailed);
     }
 
-    res.on("data", d => {
-      data += d;
+    res.on("data", responseData => {
+      data += responseData;
     });
     res.on("end", () => {
       fs.writeFile("./public/profile.json", data, function (err) {

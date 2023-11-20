@@ -12,12 +12,13 @@ import SkillsProgress from "./skillProgress/SkillProgress";
 import Footer from "./footer/Footer";
 import ScrollToTop from "../components/topButton/TopButton";
 import WorkExperience from "./workExperience/WorkExperience";
+import GitHub from "./gitHub/GitHub";
 const Main = () => {
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
     const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
     const [isShowingSplash, setIsShowingSplash] =
     useState(splashScreen.enabled);
-    useEffect(() => {
+    useEffect(() => {  
     if (isShowingSplash) {
       const splashTimer = setTimeout(
         () => setIsShowingSplash(false),
@@ -46,6 +47,7 @@ const Main = () => {
             <SkillsProgress/>
             <Education/>
             <WorkExperience/>
+            <GitHub/>
             <Footer/>
             <ScrollToTop/>
           </>
