@@ -1,4 +1,4 @@
-import React, {useState, useEffect, lazy, Suspense} from "react";
+import {useState, useEffect, lazy, Suspense} from "react";
 import {gitHubProjects} from "../../portfolio";
 import Contact from "../../components/contact/Contact";
 import Loading from "../../components/loading/Loading";

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import "./style.scss";
 import {workExperiences} from "../../portfolio";
 import {Fade} from "react-awesome-reveal";

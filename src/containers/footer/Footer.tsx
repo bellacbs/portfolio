@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import "./style.scss";
 import {Fade} from "react-awesome-reveal";
 import StyleContext from "../../global/StyleContext";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.scss";
 import EducationCard, { school } from "../../components/educationCard/EducationCard";
 import {educationInfo} from "../../portfolio";

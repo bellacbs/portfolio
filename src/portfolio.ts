@@ -118,37 +118,37 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Descomplica Digital College",
-      logo: "/src/assets/images/descomplicaLogo.jpeg",
+      logo: "/images/descomplicaLogo.jpeg",
       subHeader: "MBA in Information Security",
       duration: "2023 - 2024"
     },
     {
       schoolName: "Labenu",
-      logo: "/src/assets/images/labenuLogo.jpeg",
+      logo: "/images/labenuLogo.jpeg",
       subHeader: "BootCamp Web Full Stack",
       duration: "2021 - 2021"
     },
     {
       schoolName: "ESAB - Escola Superior Aberta do Brasil",
-      logo: "/src/assets/images/esabLogo.jpeg",
+      logo: "/images/esabLogo.jpeg",
       subHeader: "Bachelor of Information Systems",
       duration: "2017 - 2020"
     },
     {
       schoolName: "ESAB - Escola Superior Aberta do Brasil",
-      logo: "/src/assets/images/esabLogo.jpeg",
+      logo: "/images/esabLogo.jpeg",
       subHeader: "Graduate Degree in Systems Engineering",
       duration: "2019 - 2020"
     },
     {
       schoolName: "Puc Minas",
-      logo: "/src/assets/images/pucMinasLogo.jpeg",
+      logo: "/images/pucMinasLogo.jpeg",
       subHeader: "Graduate Degree in IT Governance",
       duration: "2018 - 2020"
     },
     {
       schoolName: "Pitágoras Integrated Colleges of Montes Claros",
-      logo: "/src/assets/images/unifipmocLogo.jpeg",
+      logo: "/images/unifipmocLogo.jpeg",
       subHeader: "Bachelor of Civil Egineering",
       duration: "2010 - 2017"
     }
@@ -214,7 +214,7 @@ const workExperiences = {
     {
       role: "Full Stack Developer",
       company: "ICBS Desenvolvimento de Softwares",
-      companylogo: "/src/assets/images/IcbsLogo.jpeg",
+      companylogo: "/images/IcbsLogo.jpeg",
       date: "Jun 2022 - Present",
       desc: "I manage my own company, offering freelance web and mobile development services. I specialize in React, React Native, JavaScript, NodeJS, Nest, Typescript, Docker, Firebase, and Golang. I collaborate with clients to deliver efficient and innovative solutions.",
       descBullets: [
@@ -229,7 +229,7 @@ const workExperiences = {
     {
       role: "Counselor",
       company: "YMCA of Greater Rochester",
-      companylogo: "/src/assets/images/ymcaLogo.jpeg",
+      companylogo: "/images/ymcaLogo.jpeg",
       date: "May 2023 - Sep 2023",
       // desc: "",
       descBullets: [
@@ -242,7 +242,7 @@ const workExperiences = {
     {
       role: "Backend developer",
       company: "Ubistart",
-      companylogo: "/src/assets/images/ubistartLogo.jpeg",
+      companylogo: "/images/ubistartLogo.jpeg",
       date: "Jun 2022 - Mar 2023",
       // desc: "",
       descBullets: [
@@ -258,7 +258,7 @@ const workExperiences = {
     {
       role: "Pedagogical Monitor",
       company: "Labenu",
-      companylogo: "/src/assets/images/labenuLogo.jpeg",
+      companylogo: "/images/labenuLogo.jpeg",
       date: "Nov 2021 - Jun 2022",
       // desc: "",
       descBullets: [
@@ -271,7 +271,7 @@ const workExperiences = {
     {
       role: "Bank Enployee",
       company: "Bank of Brazil",
-      companylogo: "/src/assets/images/bancodobrasilLogo.jpeg",
+      companylogo: "/images/bancodobrasilLogo.jpeg",
       date: "Jul 2012 - Mar 2021 ",
       // desc: "",
       descBullets: [

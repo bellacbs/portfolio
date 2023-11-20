@@ -1,4 +1,4 @@
-import React, {RefObject, createRef, useContext} from "react";
+import {RefObject, createRef, useContext} from "react";
 import {Fade, Slide} from "react-awesome-reveal";
 import "./style.scss";
 import StyleContext from "../../global/StyleContext";

@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import {useContext} from "react";
 import "./style.scss";
 import {about} from "../../portfolio";
 import StyleContext from "../../global/StyleContext";
