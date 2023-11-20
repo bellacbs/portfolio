@@ -13,6 +13,7 @@ import Footer from "./footer/Footer";
 import ScrollToTop from "../components/topButton/TopButton";
 import WorkExperience from "./workExperience/WorkExperience";
 import GitHub from "./gitHub/GitHub";
+import Profile from "./profile/Profile";
 const Main = () => {
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
     const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
@@ -48,6 +49,7 @@ const Main = () => {
             <Education/>
             <WorkExperience/>
             <GitHub/>
+            <Profile/>
             <Footer/>
             <ScrollToTop/>
           </>

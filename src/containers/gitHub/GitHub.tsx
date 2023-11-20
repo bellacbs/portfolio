@@ -74,11 +74,6 @@ const GitHub = () => {
             href={gitHubUrl}
             newTab={true}
           />
-          <img
-            src="https://github.com/bellacbs/LabEddit/raw/main/public/logo512.png"
-            alt="Nome alternativo da imagem"
-            style={{ width: '200px', height: '200px', objectFit: 'contain' }}
-          />
         </div>
       </Suspense>
     );

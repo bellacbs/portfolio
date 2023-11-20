@@ -21,7 +21,7 @@ export type PinnedItems = {
   edges: PinnedItem[];
 }
 
-export type User = {
+type User = {
   name: string;
   bio: string;
   avatarUrl: string;
@@ -29,7 +29,7 @@ export type User = {
   pinnedItems: PinnedItems;
 }
 
-export type Data = {
+type Data = {
   user: User;
 }
 
