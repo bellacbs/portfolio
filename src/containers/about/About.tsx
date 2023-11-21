@@ -13,7 +13,7 @@ const About = () => {
     return null;
   }
   return (
-    <Fade duration={1000}>
+    <Fade duration={1000} className="opacity">
       <div className="about-main" id="about">
         <div className="about-main-container">
           <div className="about-text-div">

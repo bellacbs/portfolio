@@ -8,7 +8,7 @@ import StyleContext from "../../global/StyleContext";
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
   return (
-    <Fade duration={1000} >
+    <Fade duration={1000} className="opacity">
       <div className="main contact-margin-top" id="contact">
         <div className="contact-div-main">
           <div className="contact-header">

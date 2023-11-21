@@ -13,7 +13,7 @@ const Skills= () => {
   return (
     <div className={isDark ? "dark-mode main" : "main"} id="skills">
       <div className="skills-main-div">
-        <Fade duration={1000}>
+        <Fade duration={1000} className="opacity">
           <div className="skills-text-div">
             <h1
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}

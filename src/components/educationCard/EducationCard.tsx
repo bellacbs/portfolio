@@ -19,7 +19,7 @@ const EducationCard = ({ school: education }: { school: school }) => {
     console.error(`Image of ${name} is missing in education section`);
   return (
     <div>
-      <Fade duration={1000}>
+      <Fade duration={1000} className="opacity">
         <div className="education-card">
           {education.logo && (
             <div className="education-card-left">

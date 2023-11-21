@@ -24,7 +24,7 @@ const ProfileCard: React.FC<UserProfileProps> = ({user}) => {
     user.hireable = "No";
   }
   return (
-    <Fade duration={1000}>
+    <Fade duration={1000} className="opacity">
       <div className="main" id="contact">
         <h1 className="prof-title">Reach Out to me!</h1>
         <div className="row">

@@ -20,7 +20,7 @@ const GithubRepoCard: React.FC<GitGubProps> = ({repo, isDark}) => {
   }
 
   return (
-    <Fade duration={1000} >
+    <Fade duration={1000} className="opacity" >
       <div>
         <div
           className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
