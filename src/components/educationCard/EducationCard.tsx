@@ -56,7 +56,7 @@ const EducationCard = ({ school: education }: { school: school }) => {
           </div>
         </div>
       </Fade>
-      <Slide duration={2000}>
+      <Slide duration={2000} className="opacity">
         <div className="education-card-border"></div>
       </Slide>
     </div>
