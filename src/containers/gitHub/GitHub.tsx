@@ -1,21 +1,17 @@
-import {useState, useEffect, useContext, Suspense, lazy} from "react";
+import {useState, useEffect, useContext} from "react";
 import "./style.scss";
 import Button from "../../components/button/Button";
 import {gitHubProjects, socialMedia} from "../../portfolio";
 import StyleContext from "../../global/StyleContext";
-import Loading from "../../components/loading/Loading"; 
-import { PinnedItem } from "./types";
+import GithubRepositoryCard from "../../components/githubCard/GithubCard";
+import { PinnedItem } from "../../global/types";
 
 const GitHub = () => {
-  const GithubRepoCard = lazy(() =>
-    import("../../components/githubCard/GithubCard")
-  );
-  const FailedLoading = () => null;
-  const renderLoader = () => <Loading />;
-  const [repo, setrepo] = useState<PinnedItem[] | string>([]);
   const [gitHubUrl, setGitHubUrl] = useState<string>("")
-  // todo: remove useContex because is not supported
-  const {isDark} = useContext(StyleContext);
+  const {isDark, gitHubData} = useContext(StyleContext);
+  const [projects, setProjects] = useState<PinnedItem[] | string>("")
+  const success: boolean = !(typeof projects === "string" || projects instanceof String) &&
+  gitHubProjects.display
 
   const getGitHubUrl = () => {
     const url = socialMedia.data.filter(({socialMediaName}) => socialMediaName == "github")
@@ -24,47 +20,22 @@ const GitHub = () => {
 
   useEffect(() => {
     getGitHubUrl()
-    const getRepoData = () => {
-      fetch("/profile.json")
-        .then(result => {
-          if (result.ok) {
-            return result.json();
-          }
-          throw result;
-        })
-        .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
-        })
-        .catch(function (error) {
-          console.error(
-            `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
-          );
-          setrepoFunction("Error");
-        });
-    };
-    getRepoData();
+    typeof gitHubData !== "string" && setProjects(gitHubData.user.pinnedItems.edges)
   }, []);
 
-  function setrepoFunction(array: PinnedItem[] | string) {
-    setrepo(array);
-  }
-  if (
-    !(typeof repo === "string" || repo instanceof String) &&
-    gitHubProjects.display
-  ) {
+  if ( success ) {
     return (
-      <Suspense fallback={renderLoader()}>
         <div className="main" id="gitHubProjects">
           <h1 className="project-title">GitHub Projects</h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
-              if (!v) {
+            {(typeof projects !== "string") && projects.map((repository:  PinnedItem, index) => {
+              if (!repository) {
                 console.error(
-                  `Github Object for repository number : ${i} is undefined`
+                  `Github Object for repository number : ${index} is undefined`
                 );
               }
               return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark as boolean} />
+                <GithubRepositoryCard repository={repository} key={repository.node.id} isDark={isDark as boolean} />
               );
             })}
           </div>
@@ -75,10 +46,9 @@ const GitHub = () => {
             newTab={true}
           />
         </div>
-      </Suspense>
     );
   } else {
-    return <FailedLoading />;
+    return null;
   }
 }
 

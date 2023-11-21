@@ -14,17 +14,22 @@ import ScrollToTop from "../components/topButton/TopButton";
 import WorkExperience from "./workExperience/WorkExperience";
 import GitHub from "./gitHub/GitHub";
 import Profile from "./profile/Profile";
+import { Data } from "../global/types";
+import { getRepositoryData } from "../utils/getRepositoryData";
+
 const Main = () => {
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
     const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
     const [isShowingSplash, setIsShowingSplash] =
     useState(splashScreen.enabled);
+    const [gitHubData, setGitHubData] = useState<Data | string>("");
     useEffect(() => {  
     if (isShowingSplash) {
       const splashTimer = setTimeout(
         () => setIsShowingSplash(false),
         splashScreen.duration
       );
+      getRepositoryData(setGitHubData)
       return () => {
         clearTimeout(splashTimer);
       };
@@ -37,7 +42,7 @@ const Main = () => {
 
     return (
       <div className={isDark ? "dark-mode" : "global"}>
-        <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+        <StyleProvider value={{isDark: isDark, changeTheme: changeTheme, gitHubData: gitHubData, }}>
           {isShowingSplash?
           <SplashScreen/>
           :

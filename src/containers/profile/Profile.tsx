@@ -1,40 +1,20 @@
-import {useState, useEffect, lazy, Suspense} from "react";
+import {useState, useEffect, useContext} from "react";
 import {gitHubProjects} from "../../portfolio";
 import Contact from "../../components/contact/Contact";
-import Loading from "../../components/loading/Loading";
-import { User } from "../../components/profileCard/ProfileCard";
+import ProfileCard, { User } from "../../components/profileCard/ProfileCard";
+import StyleContext from "../../global/StyleContext";
 
-const renderLoader = () => <Loading />;
-const GithubProfileCard = lazy(() =>
-  import("../../components/profileCard/ProfileCard")
-);
 export default function Profile() {
+  const {gitHubData} = useContext(StyleContext);
   const [user, setUser] = useState<User | string>("");
-  function setProfileFunction(array: User | string) {
-    setUser(array);
-  }
 
   useEffect(() => {
     if (gitHubProjects.showGithubProfile === "true") {
-      const getProfileData = () => {
-        fetch("/profile.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setProfileFunction(response.data.user);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
-            );
-            setProfileFunction("Error");
-            gitHubProjects.showGithubProfile = "false";
-          });
-      };
-      getProfileData();
+      if (typeof gitHubData != "string") {
+        setUser(gitHubData.user);
+      }else{
+        gitHubProjects.showGithubProfile = "false";
+      }
     }
   }, []);
   if (
@@ -43,9 +23,7 @@ export default function Profile() {
     !(typeof user === "string" || user instanceof String)
   ) {
     return (
-      <Suspense fallback={renderLoader()}>
-        <GithubProfileCard user={user} />
-      </Suspense>
+      <ProfileCard user={user} />
     );
   } else {
     return <Contact />;

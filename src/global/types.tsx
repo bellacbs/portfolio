@@ -29,7 +29,7 @@ type User = {
   pinnedItems: PinnedItems;
 }
 
-type Data = {
+export type Data = {
   user: User;
 }
 
