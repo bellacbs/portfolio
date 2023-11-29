@@ -18,8 +18,7 @@ import { Data } from "../global/types";
 import { getRepositoryData } from "../utils/getRepositoryData";
 
 const Main = () => {
-    const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-    const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+    const [isDark, setIsDark] = useLocalStorage("isDark", false);
     const [isShowingSplash, setIsShowingSplash] =
     useState(splashScreen.enabled);
     const [gitHubData, setGitHubData] = useState<Data | string>("");
