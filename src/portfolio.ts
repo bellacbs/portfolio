@@ -216,7 +216,7 @@ const workExperiences = {
       company: "Ubistart",
       companylogo: "/images/ubistartLogo.jpeg",
       date: "Jan 2024 - Present",
-      // desc: "",
+      desc: "",
       descBullets: [
         "99% optimization of PDF generation using the Go language.",
         "Application back-end for adequate duplicate invoices for the user of the company's service",
@@ -228,7 +228,7 @@ const workExperiences = {
       company: "YMCA of Greater Rochester",
       companylogo: "/images/ymcaLogo.jpeg",
       date: "May 2023 - Sep 2023",
-      // desc: "",
+      desc: "",
       descBullets: [
         "Developed creative and collaborative activities for native English speakers.",
         "Actively learned English while leading educational programs.",
@@ -241,7 +241,7 @@ const workExperiences = {
       company: "Ubistart",
       companylogo: "/images/ubistartLogo.jpeg",
       date: "Jun 2022 - Mar 2023",
-      // desc: "",
+      desc: "",
       descBullets: [
         "Designed and implemented real-time communication applications for video calls and radio using the WebRTC protocol.",
         "Managed transmission, call processing, and recording phases.",
@@ -257,7 +257,7 @@ const workExperiences = {
       company: "Labenu",
       companylogo: "/images/labenuLogo.jpeg",
       date: "Nov 2021 - Jun 2022",
-      // desc: "",
+      desc: "",
       descBullets: [
         "Training technology professionals, including class monitoring, student support, code evaluation, and providing feedback for improvement.",
         "Teaching individuals who came from completely different career backgrounds to the IT industry.",
@@ -270,7 +270,7 @@ const workExperiences = {
       company: "Bank of Brazil",
       companylogo: "/images/bancodobrasilLogo.jpeg",
       date: "Jul 2012 - Mar 2021 ",
-      // desc: "",
+      desc: "",
       descBullets: [
         "Promotion and marketing of various banking products and services.",
         "Alignment of corporate goals with the needs and desires of clients.",
