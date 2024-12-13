@@ -213,17 +213,14 @@ const workExperiences = {
   experience: [
     {
       role: "Full Stack Developer",
-      company: "ICBS Desenvolvimento de Softwares",
-      companylogo: "/images/IcbsLogo.jpeg",
-      date: "Jun 2022 - Present",
-      desc: "I manage my own company, offering freelance web and mobile development services. I specialize in React, React Native, JavaScript, NodeJS, Nest, Typescript, Docker, Firebase, and Golang. I collaborate with clients to deliver efficient and innovative solutions.",
+      company: "Ubistart",
+      companylogo: "/images/ubistartLogo.jpeg",
+      date: "Jan 2024 - Present",
+      // desc: "",
       descBullets: [
-        "Development of a mobile application for the delivery sector, using React Native, NestJS, Typescript, Firebase, Docker, CI/CD.",
-        "Structuring all layers of the application, such as Backend, Frontend (web and mobile), Database, and Cloud Infrastructure.",
-        "Direct contact with the client to ensure continuous alignment and satisfaction.",
-        "System requirements gathering to ensure customized solutions.",
-        "Development of applications from scratch.",
-        "Continuous maintenance and enhancement of legacy technological applications."
+        "99% optimization of PDF generation using the Go language.",
+        "Application back-end for adequate duplicate invoices for the user of the company's service",
+        "Front-end project maintenance using Reactjs",
       ]
     },
     {
