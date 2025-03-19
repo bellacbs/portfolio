@@ -15,7 +15,7 @@ const about = {
     "As a dedicated Full Stack Software Developer 🚀, I bring valuable expertise in crafting robust applications using a versatile tech stack, including Node.js, TypeScript, Golang, React.js, React Native, and various other cutting-edge libraries and frameworks. With a passion for creating innovative solutions, I thrive on turning ideas into seamless, high-performance software."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1vDkCvz28l0jy9Sx5PAr3dP1Z_bI4emZB/view?usp=sharing",
+    "https://drive.google.com/file/d/1PdHlhOnhf8tXi7D8aHGdQDNCQqJCc8pe/view?usp=sharing",
   displayAbout: true
 };
 
