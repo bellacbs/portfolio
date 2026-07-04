@@ -1,59 +1,66 @@
-import {useContext} from "react";
 import Headroom from "react-headroom";
 import "./style.scss";
-import ToggleSwitch from "../toggleSwitch/ToggleSwitch";
-import StyleContext from "../../global/StyleContext";
 import {
   about,
   workExperiences,
   skillsSection,
   gitHubProjects
 } from "../../portfolio";
+import { useScrollSpy } from "../../hooks/useScrollSpy";
 
 const Header = () => {
-  const {isDark} = useContext(StyleContext);
   const viewExperience = workExperiences.display;
   const viewgitHubProjects = gitHubProjects.display;
   const viewSkills = skillsSection.display;
 
+  const navIds = [
+    ...(viewSkills ? ["skills"] : []),
+    ...(viewExperience ? ["experience"] : []),
+    ...(viewgitHubProjects ? ["gitHubProjects"] : []),
+    "contact"
+  ];
+  const activeId = useScrollSpy(navIds);
+
   return (
     <Headroom>
-      <header className={isDark ? "dark-menu header" : "header"}>
+      <header className="header">
         <a href="/" className="logo">
-          <span className="grey-color"> &lt;</span>
-          <span className="logo-name">{about.username}</span>
-          <span className="grey-color">/&gt;</span>
+          {about.username.split(" ")[0]}
+          <span className="grey-color">.</span>
+          {about.username.split(" ").slice(1).join(" ")}
         </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          style={{color: "white"}}
-        >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+        <label className="menu-icon" htmlFor="menu-btn">
+          <span className="navicon"></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
+        <ul className="menu">
           {viewSkills && (
             <li>
-              <a href="#skills">Skills</a>
+              <a href="#skills" className={activeId === "skills" ? "active" : ""}>
+                Skills
+              </a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#experience" className={activeId === "experience" ? "active" : ""}>
+                Work Experiences
+              </a>
             </li>
           )}
           {viewgitHubProjects && (
             <li>
-              <a href="#gitHubProjects">GitHub Projects</a>
+              <a
+                href="#gitHubProjects"
+                className={activeId === "gitHubProjects" ? "active" : ""}
+              >
+                GitHub Projects
+              </a>
             </li>
           )}
           <li>
-            <a href="#contact">Contact Me</a>
-          </li>
-          <li>
-            <a>
-              <ToggleSwitch />
+            <a href="#contact" className={`nav-cta ${activeId === "contact" ? "active" : ""}`}>
+              Contact Me
             </a>
           </li>
         </ul>

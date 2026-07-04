@@ -15,9 +15,19 @@ const about = {
     "As a dedicated Full Stack Software Developer 🚀, I bring valuable expertise in crafting robust applications using a versatile tech stack, including Node.js, TypeScript, Golang, React.js, React Native, and various other cutting-edge libraries and frameworks. With a passion for creating innovative solutions, I thrive on turning ideas into seamless, high-performance software."
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1PdHlhOnhf8tXi7D8aHGdQDNCQqJCc8pe/view?usp=sharing",
+    "https://drive.google.com/file/d/1RJC88Fp9MVjyjR9aWloPSBucVTcPnY6N/view?usp=sharing",
   displayAbout: true
 };
+
+// compute "years of experience" in the hero without hardcoding a number that rots.
+const techCareerStartYear = 2022;
+
+// Hero visual: stacked cards showing real facets of her stack, back to front.
+const heroFacets = [
+  { role: "Backend Developer", tags: ["Node.js", "Golang", "SQL", "Firebase", "NestJs"] },
+  { role: "Infra & Cloud", tags: ["AWS", "Docker", "Firebase"] },
+  { role: "Full Stack Developer", tags: ["React", "TypeScript", "Angular"] }
+];
 
 // Social Media Links
 
@@ -56,57 +66,6 @@ const skillsSection = {
     emoji(
       "⚡ Seamlessly integrating third-party services, including Firebase, AWS, and Google Cloud, to enhance the functionality and performance of applications."
     )
-  ],
-
-  softwareSkills: [
-    {
-      skillName: "html",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "Reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "React Native",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
-    },
-    {
-      skillName: "Go",
-      fontAwesomeClassname: "fa-brands fa-golang"
-    }
   ],
   display: true
 };
@@ -155,55 +114,46 @@ const educationInfo = {
   ]
 };
 
-const techStack = {
-  viewSkillBars: true,
-  experience: [
+// Proficiency section — tech stack organized as a category card grid
+const skillCategories = {
+  display: true,
+  categories: [
     {
-      Stack: "Nodejs",
-      progressPercentage: "80%"
+      key: "frontend",
+      title: "Frontend",
+      desc: "Fast, accessible interfaces for the web.",
+      accent: "blue",
+      tags: ["React", "HTML", "CSS", "Next.js", "TypeScript", "Angular"]
     },
     {
-      Stack: "sql",
-      progressPercentage: "70%"
+      key: "backend",
+      title: "Backend",
+      desc: "APIs and services that scale with the product.",
+      accent: "purple",
+      tags: ["Node.js", " NestJS", "PHP", "Golang", "Java Quarkus"]
     },
     {
-      Stack: "typescript",
-      progressPercentage: "80%"
+      key: "data",
+      title: "Data",
+      desc: "Modeling and querying with efficiency in mind.",
+      accent: "blue",
+      tags: ["SQL", "NoSQL", "PostgreSQL", "MySQL", "Firebase"]
     },
     {
-      Stack: "Golang",
-      progressPercentage: "80%"
+      key: "cloud",
+      title: "Cloud & DevOps",
+      desc: "Deploys, containers, and infrastructure that stays up.",
+      accent: "pink",
+      tags: ["AWS", "Docker", "Firebase"]
     },
     {
-      Stack: "Firebase",
-      progressPercentage: "60%"
-    },
-    {
-      Stack: "Docker",
-      progressPercentage: "70%"
-    },
-    {
-      Stack: "AWS",
-      progressPercentage: "40%"
-    },
-    {
-      Stack: "React",
-      progressPercentage: "60%"
-    },
-    {
-      Stack: "React Native",
-      progressPercentage: "60%"
-    },
-    {
-      Stack: "HTML",
-      progressPercentage: "60%"
-    },
-    {
-      Stack: "CSS",
-      progressPercentage: "60%"
+      key: "languages",
+      title: "Languages",
+      desc: "Typing and clarity across every layer.",
+      accent: "purple",
+      tags: ["TypeScript", "Golang", "Java", "JavaScript", "PHP"]
     }
-  ],
-  displayCodersrank: false
+  ]
 };
 
 // Work experience section
@@ -213,9 +163,34 @@ const workExperiences = {
   experience: [
     {
       role: "Full Stack Developer",
+      company: "Caixa Econômica Federal",
+      companylogo: "/images/caixaEconomicaFederalLogo.png",
+      date: "Jun 2025 - Present",
+      desc: "",
+      descBullets: [
+        "Contributed to innovation and digital transformation initiatives.",
+        "Designed and developed APIs with SAP ECC and Java Quarkus for enterprise system integration.",
+        "Collaborated on the development of new web applications using Angular.",
+      ]
+    },
+    {
+      role: "Full Stack Developer",
+      company: "ICBS Desenvolvimento de Softwares",
+      companylogo: "/images/icbs-work-experience-logo.png",
+      date: "Jun 2022 - Sep 2025",
+      desc: "",
+      descBullets: [
+        "Manage my own company, delivering freelance web development services.",
+        "Build web applications using React, Node.js, Golang, NestJS, JavaScript, and TypeScript.",
+        "Develop solutions with Docker, Firebase, MySQL, PostgreSQL, and AI integrations.",
+        "Collaborate with clients to deliver scalable and innovative solutions.",
+      ]
+    },
+    {
+      role: "Full Stack Developer",
       company: "Ubistart",
       companylogo: "/images/ubistartLogo.jpeg",
-      date: "Jan 2024 - Present",
+      date: "Jan 2024 - Mar 2025",
       desc: "",
       descBullets: [
         "99% optimization of PDF generation using the Go language.",
@@ -302,11 +277,13 @@ const isHireable = true;
 
 export {
     about,
+    techCareerStartYear,
+    heroFacets,
     socialMedia,
     splashScreen,
     skillsSection,
     educationInfo,
-    techStack,
+    skillCategories,
     workExperiences,
     gitHubProjects,
     contactInfo,

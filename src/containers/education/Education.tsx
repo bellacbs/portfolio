@@ -6,12 +6,17 @@ import {educationInfo} from "../../portfolio";
 const Education = () => {
   if (educationInfo.display) {
     return (
-      <div className="education-section" id="education">
-        <h1 className="education-heading">Education</h1>
-        <div className="education-card-container">
-          {educationInfo.schools.map((school: school, index: number) => (
-            <EducationCard key={index} school={school} />
-          ))}
+      <div className="section" id="education">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="section-label purple">Background</span>
+            <h2>Education</h2>
+          </div>
+          <div className="education-card-container">
+            {educationInfo.schools.map((school: school, index: number) => (
+              <EducationCard key={index} school={school} />
+            ))}
+          </div>
         </div>
       </div>
     );

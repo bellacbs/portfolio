@@ -1,42 +1,23 @@
-import {useContext} from "react";
 import "./style.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {contactInfo} from "../../portfolio";
 import {Fade} from "react-awesome-reveal";
-import StyleContext from "../../global/StyleContext";
 
 export default function Contact() {
-  const {isDark} = useContext(StyleContext);
   return (
     <Fade duration={1000} className="opacity">
-      <div className="main contact-margin-top" id="contact">
-        <div className="contact-div-main">
-          <div className="contact-header">
-            <h1 className="heading contact-title">{contactInfo.title}</h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode contact-subtitle"
-                  : "subTitle contact-subtitle"
-              }
-            >
-              {contactInfo.subtitle}
-            </p>
-            <div
-              className={
-                isDark ? "dark-mode contact-text-div" : "contact-text-div"
-              }
-            >
-              <a
-                className="contact-detail-email"
-                href={"mailto:" + contactInfo.email_address}
-              >
-                {contactInfo.email_address}
-              </a>
-              <br />
-              <br />
-              <SocialMedia />
-            </div>
+      <div className="section" id="contact">
+        <div className="wrap">
+          <div className="section-head">
+            <span className="section-label purple">Get in touch</span>
+            <h2>{contactInfo.title}</h2>
+            <p>{contactInfo.subtitle}</p>
+          </div>
+          <div className="card contact-card">
+            <a className="contact-detail-email" href={"mailto:" + contactInfo.email_address}>
+              {contactInfo.email_address}
+            </a>
+            <SocialMedia />
           </div>
         </div>
       </div>

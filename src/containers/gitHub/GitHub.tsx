@@ -8,7 +8,7 @@ import { PinnedItem } from "../../global/types";
 
 const GitHub = () => {
   const [gitHubUrl, setGitHubUrl] = useState<string>("")
-  const {isDark, gitHubData} = useContext(StyleContext);
+  const {gitHubData} = useContext(StyleContext);
   const [projects, setProjects] = useState<PinnedItem[] | string>("")
   const success: boolean = !(typeof projects === "string" || projects instanceof String) &&
   gitHubProjects.display
@@ -25,26 +25,31 @@ const GitHub = () => {
 
   if ( success ) {
     return (
-        <div className="main" id="gitHubProjects">
-          <h1 className="project-title">GitHub Projects</h1>
-          <div className="repo-cards-div-main">
-            {(typeof projects !== "string") && projects.map((repository:  PinnedItem, index) => {
-              if (!repository) {
-                console.error(
-                  `Github Object for repository number : ${index} is undefined`
+        <div className="section" id="gitHubProjects">
+          <div className="wrap">
+            <div className="section-head">
+              <span className="section-label blue">Open source</span>
+              <h2>GitHub Projects</h2>
+            </div>
+            <div className="repo-cards-div-main">
+              {(typeof projects !== "string") && projects.map((repository:  PinnedItem, index) => {
+                if (!repository) {
+                  console.error(
+                    `Github Object for repository number : ${index} is undefined`
+                  );
+                }
+                return (
+                  <GithubRepositoryCard repository={repository} key={repository.node.id} />
                 );
-              }
-              return (
-                <GithubRepositoryCard repository={repository} key={repository.node.id} isDark={isDark as boolean} />
-              );
-            })}
+              })}
+            </div>
+            <Button
+              text={"More Projects"}
+              className="btn-secondary project-button"
+              href={gitHubUrl}
+              newTab={true}
+            />
           </div>
-          <Button
-            text={"More Projects"}
-            className="project-button"
-            href={gitHubUrl}
-            newTab={true}
-          />
         </div>
     );
   } else {

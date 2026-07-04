@@ -14,19 +14,19 @@ const SocialMedia = () => {
     return null;
   }
   return (
-    <div className="social-media-div">
+    <div className="social-media-div icon-btn-row">
         {
-            socialMedia.data.map(({socialMediaName, href, fontAwesomeClassname, socialClass}: SocialMediaType, index: number): ReactNode => {
+            socialMedia.data.map(({socialMediaName, href, fontAwesomeClassname}: SocialMediaType, index: number): ReactNode => {
                  return (socialMediaName.length > 0 ? (
                     <a
                         key={index}
                         href={href}
-                        className={`icon-button ${socialClass}`}
+                        aria-label={socialMediaName}
+                        className="icon-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                       <i className={fontAwesomeClassname}></i>
-                      <span></span>
                     </a>
                   ) : null)
             })

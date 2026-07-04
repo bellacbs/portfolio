@@ -5,11 +5,10 @@ import {formatFileSizeDisplay} from "../../utils/formatSize";
 import { PinnedItem } from "../../global/types";
 
 type GitGubProps = {
-  repository: PinnedItem,
-  isDark: boolean
+  repository: PinnedItem
 }
 
-const GithubRepositoryCard: React.FC<GitGubProps> = ({repository, isDark}) => {
+const GithubRepositoryCard: React.FC<GitGubProps> = ({repository}) => {
   function openUrlInNewTab(url: string, name: string) {
     if (!url) {
       console.log(`URL in ${name} is undefined`);
@@ -21,44 +20,42 @@ const GithubRepositoryCard: React.FC<GitGubProps> = ({repository, isDark}) => {
 
   return (
     <Fade duration={1000} className="opacity" >
-      <div>
-        <div
-          className={isDark ? "dark-card-mode repo-card-div" : "repo-card-div"}
-          key={repository.node.id}
-          onClick={() => openUrlInNewTab(repository.node.url, repository.node.name)}
-        >
-          <div className="repo-name-div">
-            <svg
-              aria-hidden="true"
-              className="octicon repo-svg"
-              height="20"
-              role="img"
-              viewBox="0 0 12 16"
-              width="14"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
-              ></path>
-            </svg>
-            <p className="repo-name">{repository.node.name}</p>
+      <div
+        className="card repo-card-div"
+        key={repository.node.id}
+        onClick={() => openUrlInNewTab(repository.node.url, repository.node.name)}
+      >
+        <div className="repo-name-div">
+          <svg
+            aria-hidden="true"
+            className="octicon repo-svg"
+            height="20"
+            role="img"
+            viewBox="0 0 12 16"
+            width="14"
+          >
+            <path
+              fillRule="evenodd"
+              d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+            ></path>
+          </svg>
+          <p className="repo-name">{repository.node.name}</p>
+        </div>
+        <p className="repo-description">{repository.node.description}</p>
+        <div className="repo-stats">
+          <div className="repo-left-stat">
+            {repository.node.primaryLanguage !== null && (
+              <span>
+                <div
+                  className="language-color"
+                  style={{backgroundColor: repository.node.primaryLanguage.color}}
+                ></div>
+                <p>{repository.node.primaryLanguage.name}</p>
+              </span>
+            )}
           </div>
-          <p className="repo-description">{repository.node.description}</p>
-          <div className="repo-stats">
-            <div className="repo-left-stat">
-              {repository.node.primaryLanguage !== null && (
-                <span>
-                  <div
-                    className="language-color"
-                    style={{backgroundColor: repository.node.primaryLanguage.color}}
-                  ></div>
-                  <p>{repository.node.primaryLanguage.name}</p>
-                </span>
-              )}
-            </div>
-            <div className="repo-right-stat">
-              <p>{formatFileSizeDisplay(repository.node.diskUsage)}</p>
-            </div>
+          <div className="repo-right-stat">
+            <p>{formatFileSizeDisplay(repository.node.diskUsage)}</p>
           </div>
         </div>
       </div>

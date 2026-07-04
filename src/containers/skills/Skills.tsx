@@ -1,51 +1,26 @@
-import {useContext} from "react";
 import "./style.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkills";
 import {skillsSection} from "../../portfolio";
 import {Fade} from "react-awesome-reveal";
-import StyleContext from "../../global/StyleContext";
 
 const Skills= () => {
-  const {isDark} = useContext(StyleContext);
   if (!skillsSection.display) {
     return null;
   }
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
-      <div className="skills-main-div">
+    <div className="section" id="skills">
+      <div className="wrap">
         <Fade duration={1000} className="opacity">
-          <div className="skills-text-div">
-            <h1
-              className={isDark ? "dark-mode skills-heading" : "skills-heading"}
-            >
-              {skillsSection.title}{" "}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text-subtitle"
-                  : "subTitle skills-text-subtitle"
-              }
-            >
-              {skillsSection.subTitle}
-            </p>
-            <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
-                return (
-                  <p
-                    key={i}
-                    className={
-                      isDark
-                        ? "dark-mode subTitle skills-text"
-                        : "subTitle skills-text"
-                    }
-                  >
-                    {skills}
-                  </p>
-                );
-              })}
-            </div>
+          <div className="section-head">
+            <span className="section-label blue">Approach</span>
+            <h2>{skillsSection.title}</h2>
+            <p>{skillsSection.subTitle}</p>
+          </div>
+          <div className="skills-card-row">
+            {skillsSection.skills.map((skill, i) => (
+              <div className="card skills-card" key={i}>
+                <p className="skills-text">{skill}</p>
+              </div>
+            ))}
           </div>
         </Fade>
       </div>

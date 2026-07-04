@@ -1,17 +1,11 @@
 @import "../global/color";
-
-.dark-mode {
-  background-color: $darkBackground;
-  color: $textColorDark !important;
-  transition: "0.1s";
-}
+@import "../global/base";
 
 .global {
-    background-color: $lightBackground1;
-    color: black;
-    transition: "0.1s";
+  background-color: $bg;
+  color: $text;
 }
 
-.opacity{
+.opacity {
   opacity: 1 !important;
 }
